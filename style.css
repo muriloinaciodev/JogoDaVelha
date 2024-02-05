@@ -1,0 +1,78 @@
+:root {
+	--default-color: black;
+	--default-bg: white;
+
+}
+
+body, html {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--default-bg);
+
+/*	background-color: #232425;*/
+}
+
+main {
+	width: 368px;
+	height: 368px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	justify-content: space-between;
+	background-color: var(--default-color);
+}
+
+.square {
+	width: 120px;
+	height: 120px;
+	border: none;
+	background-color: var(--default-bg);
+	background-size: 70px;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.square:hover {
+	cursor: pointer;
+	filter: brightness(0.9);
+}
+#invisible {
+	display: none;
+}
+
+svg {
+	width: 80px;
+	height: 80px;
+}
+
+svg#x path {
+	fill: red;
+}
+svg#o path {
+	stroke: blue;
+}
+
+@media only screen and (max-width: 980px) {
+	main {
+		width: 92vw;
+		height: 92vw;
+	}
+	.square {
+		width: 30vw;
+		height: 30vw;
+	}
+	svg {
+		width: 20vw;
+		height: 20vw;
+	}
+}
